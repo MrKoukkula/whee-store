@@ -7,15 +7,15 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  sideNavOpen: boolean = false;
-  itemsInCart: number = 0;
+  sideNavOpen = false;
+  itemsInCart = 0;
 
   constructor(private cartService: ShoppingCartService) { }
 
-  ngOnInit(): void {;
+  ngOnInit(): void {
   }
 
-  openCart() {
+  openCart(): void {
     this.cartService.cartOpen = true;
   }
 

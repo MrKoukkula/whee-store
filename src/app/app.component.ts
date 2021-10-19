@@ -11,8 +11,7 @@ export class AppComponent {
 
   constructor(public cartService: ShoppingCartService) {  }
 
-  closeDrawer() {
-    console.log("closed");
+  closeDrawer(): void {
     this.cartService.cartOpen = false;
   }
 }

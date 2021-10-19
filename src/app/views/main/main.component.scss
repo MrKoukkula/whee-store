@@ -1,6 +1,11 @@
 .main {
-  // background-color: hotpink;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
 
+  &__list {
+    margin-top: 25px;
+    grid-column: 6 / span 10;
+  }
 }
 
 

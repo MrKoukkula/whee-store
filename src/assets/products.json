@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "title": "Circle",
+      "subtitle": "Perfect choice when you don't need any corners.",
+      "image": "../assets/circle.svg",
+      "id": 1,
+      "price": 999
+    },
+    {
+      "title": "Rectangle",
+      "subtitle": "For once, it's a great idea to think inside the box.",
+      "image": "../assets/rect.svg",
+      "id": 2,
+      "price": 899
+    },
+    {
+      "title": "Triangle",
+      "subtitle": "A true classic with three elegant corners.",
+      "image": "../assets/triangle.svg",
+      "id": 3,
+      "price": 1009
+    }
+  ]
+}

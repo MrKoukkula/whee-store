@@ -1,0 +1,30 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  &__image {
+    grid-column: 0 / span 2;
+    grid-row: 1 / span 6;
+  }
+
+  &__title {
+    grid-column: 3 / span 5;
+    grid-row: span 3;
+  }
+
+  &__subtitle {
+    grid-column: span 5;
+    grid-row: 3 / span 3;
+  }
+
+  &__price {
+    grid-column: span 3;
+    grid-row: 3;
+  }
+
+  &__addToCart {
+    grid-column: span 3;
+    grid-row: 3 / 3;
+  }
+}
