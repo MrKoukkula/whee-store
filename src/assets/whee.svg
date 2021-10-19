@@ -1,0 +1,15 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 62" width="130" height="62">
+	<title>Artboard 1</title>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 60px;line-height: 36px;fill: #000000;font-weight: 400;font-family: "Pacifico-Regular", "Pacifico" } 
+	</style>
+	<g id="Artboard 1">
+		<g id="header">
+			<text id="whee" style="transform: matrix(1.101,0,0,1.101,-2.078,62.261)" >
+				<tspan x="0" y="0" class="txt0" dx="0" >w</tspan><tspan  y="0" class="txt0" dx="0 -1 -1 -1" >hee
+</tspan>
+			</text>
+		</g>
+	</g>
+</svg>

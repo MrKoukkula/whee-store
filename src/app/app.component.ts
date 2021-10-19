@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShoppingCartService } from './services/shopping-cart.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'whee-store';
+
+  constructor(public cartService: ShoppingCartService) {  }
+
+  closeDrawer() {
+    console.log("closed");
+    this.cartService.cartOpen = false;
+  }
 }

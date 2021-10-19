@@ -1,1 +1,24 @@
-<p>header works!</p>
+<section class="header">
+  <div class="header__logo">
+    <img src="../../../assets/whee.png" alt="" srcset="">
+  </div>
+  <div class="header__slogan">
+    <h4>The most definitive shape store in the world</h4>
+  </div>
+  <div class="header__cart">
+    <div class="cart">
+      <div class="cart__items">
+        {{itemsInCart > 0 ? itemsInCart + ' items' : 'No items in cart' }}
+      </div>
+      <div class="cart__icon">
+        <button mat-icon-button (click)="openCart()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
