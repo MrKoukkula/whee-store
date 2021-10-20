@@ -11,7 +11,7 @@ export class ShoppingCartService {
   itemsInCart = 0;
   totalSum = 0;
 
-  private productsInCart$: CartItem[] = [];
+  public productsInCart$: CartItem[] = [];
 
   constructor() { }
 
@@ -42,6 +42,23 @@ export class ShoppingCartService {
     this.countItems();
     this.countTotalSum();
     return of(this.productsInCart$);
+  }
+
+  removeFromCart(item: CartItem): void {
+    this.productsInCart$ = this.productsInCart$.filter(prod => prod.product.id !== item.product.id);
+    this.countItems();
+    this.countTotalSum();
+  }
+
+  changeAmount(cartItem: CartItem): void {
+    this.productsInCart$ = this.productsInCart$.map(item => {
+      if (item.product === cartItem.product) {
+        item.amount = cartItem.amount;
+      }
+      return item;
+    });
+    this.countItems();
+    this.countTotalSum();
   }
 
   countItems(): void {

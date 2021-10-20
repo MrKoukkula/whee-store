@@ -1,1 +1,20 @@
-<p>shopping-cart works!</p>
+<section class="cart">
+  <div class="cart__title">
+    <h1>Your shopping cart</h1>
+  </div>
+  <div *ngIf="this.cart.productsInCart$.length > 0; else noItems" class="cart__list">
+    <app-shopping-cart-item [cartItem]="item" *ngFor="let item of this.cart.productsInCart$"></app-shopping-cart-item>
+  </div>
+
+  <ng-template #noItems>
+    You have no items yet!
+  </ng-template>
+
+  <div class="cart__totalSum">
+    Your total: {{this.cart.totalSum}}
+  </div>
+  <div class="cart__checkout">
+    <button type="button" mat-raised-button (click)="log()">Checkout</button>
+  </div>
+</section>
+

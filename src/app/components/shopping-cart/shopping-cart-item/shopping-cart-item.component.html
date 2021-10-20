@@ -1,0 +1,19 @@
+<div class="product">
+  <div class="product__image">
+    <img [src]="cartItem.product.image">
+  </div>
+  <div class="product__title">
+    {{cartItem.product.title}}
+  </div>
+  <div class="product__amount">
+    <mat-form-field>
+      <input type="number" matInput [value]="cartItem.amount" (change)="amountChanged($event)">
+    </mat-form-field>
+  </div>
+  <div class="product__delete">
+    <button type="button" mat-icon-button (click)="removeFromCart()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+
