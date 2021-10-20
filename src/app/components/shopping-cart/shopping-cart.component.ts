@@ -15,8 +15,8 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  log(): void {
-    console.log(this.cart.productsInCart$);
+  checkout(): void {
+    alert('The user is going to checkout');
   }
 
 }

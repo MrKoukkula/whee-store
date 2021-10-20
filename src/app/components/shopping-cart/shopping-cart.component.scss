@@ -1,0 +1,21 @@
+.cart {
+  margin: 10px;
+  font-family: 'Playfair Display', serif;
+
+
+  &__title {
+    grid-row: 1 / 2;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+    }
+  }
+
+  &__list {
+    margin-bottom: 15px;
+  }
+
+  &__totalSum {
+    margin: 15px 0 15px 0;
+  }
+}

@@ -6,7 +6,7 @@
     <app-shopping-cart-item [cartItem]="item" *ngFor="let item of this.cart.productsInCart$"></app-shopping-cart-item>
   </div>
 
-  <ng-template #noItems>
+  <ng-template #noItems class="cart__list">
     You have no items yet!
   </ng-template>
 
@@ -14,7 +14,7 @@
     Your total: {{this.cart.totalSum}}
   </div>
   <div class="cart__checkout">
-    <button type="button" mat-raised-button (click)="log()">Checkout</button>
+    <button type="button" mat-raised-button (click)="checkout()">Checkout</button>
   </div>
 </section>
 

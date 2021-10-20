@@ -38,7 +38,6 @@ export class ShoppingCartService {
       } as CartItem;
       this.productsInCart$.push(newItem);
     }
-    console.log(this.productsInCart$);
     this.countItems();
     this.countTotalSum();
     return of(this.productsInCart$);
@@ -66,7 +65,6 @@ export class ShoppingCartService {
     this.productsInCart$.forEach(item => {
       allItems = allItems + item.amount;
     });
-    console.log(allItems);
     this.itemsInCart = allItems;
   }
 
@@ -78,6 +76,5 @@ export class ShoppingCartService {
       sum = sum + item.amount * item.product.price;
     });
     this.totalSum = sum;
-    console.log(sum);
   }
 }
