@@ -19,4 +19,8 @@ export class ShoppingCartComponent implements OnInit {
     alert('The user is going to checkout');
   }
 
+  closeCart(): void {
+    this.cart.cartOpen = false;
+  }
+
 }

@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .main {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
@@ -8,4 +10,45 @@
   }
 }
 
+@media only screen and (max-width: $desktop) {
+  .main {
 
+    &__list {
+      grid-column: 4 / span 12;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .main {
+
+    &__list {
+      grid-column: 2 / span 16;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-large) {
+  .main {
+    padding: 0 15px;
+
+    &__list {
+      grid-column: 1 / 21;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .main {
+    padding: 0 5px;
+  }
+}
+
+@media only screen and (max-width: $mobile-small) {
+  .main {
+
+    &__list {
+      margin-top: 5px;
+    }
+  }
+}

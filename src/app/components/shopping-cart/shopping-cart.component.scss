@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .cart {
   margin: 10px;
   font-family: 'Playfair Display', serif;
@@ -17,5 +19,18 @@
 
   &__totalSum {
     margin: 15px 0 15px 0;
+  }
+
+  .closeButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .cart {
+
+    .closeButton {
+      display: block;
+    }
   }
 }
