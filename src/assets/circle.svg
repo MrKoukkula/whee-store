@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 127" width="125" height="127">
+	<title>Artboard 1</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ef4a8d;stroke-width: 2 } 
+	</style>
+	<g id="Artboard 1">
+		<g id="circle">
+			<path id="Ellipse 1 copy" class="shp0" d="M62.5 1C97.02 1 125 28.98 125 63.5C125 98.02 97.02 126 62.5 126C27.98 126 0 98.02 0 63.5C0 28.98 27.98 1 62.5 1Z" />
+		</g>
+	</g>
+</svg>

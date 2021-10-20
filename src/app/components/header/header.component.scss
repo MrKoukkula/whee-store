@@ -50,14 +50,18 @@
 
       .cart {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(3, 1fr);
         align-self: center;
         height: 100%;
 
         &__items {
+          grid-column: span 2;
           font-family: 'Playfair Display', serif;
           align-self: center;
           justify-self: flex-end;
+          font-size: 100%;
+          font-weight: 600;
+          cursor: pointer;
         }
 
         &__icon {
@@ -67,13 +71,17 @@
           display: flex;
 
           button {
-            padding: 10px;
             margin: auto;
             margin-left: 5px;
             border-radius: 50%;
             border: none;
             background-color: black;
             color: white;
+            transition: background-color 0.3s;
+          }
+
+          button:hover {
+            background-color: rgb(107, 107, 107);
           }
         }
       }

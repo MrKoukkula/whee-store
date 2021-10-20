@@ -1,30 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 .product {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  margin: 35px 0 35px 0;
 
   &__image {
-    grid-column: 0 / span 2;
+    grid-column: 1 / span 2;
     grid-row: 1 / span 6;
+    align-self: center;
+    justify-self: center;
   }
 
   &__title {
-    grid-column: 3 / span 5;
-    grid-row: span 3;
+    grid-column: 3 / span 4;
+    grid-row: 1 / span 3;
+    align-self: end;
+    justify-self: start;
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 25px;
   }
 
   &__subtitle {
-    grid-column: span 5;
-    grid-row: 3 / span 3;
+    grid-column: 3 / span 3;
+    grid-row: 4 / span 3;
+    align-self: center;
+    justify-self: start;
+    font-family: 'Playfair Display', serif;
+    margin-left: 25px;
   }
 
   &__price {
-    grid-column: span 3;
-    grid-row: 3;
+    grid-column: 9 / span 3;
+    grid-row: 1 / span 3;
+    align-self: end;
+    justify-self: end;
+    font-size: 200%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
   }
 
   &__addToCart {
-    grid-column: span 3;
-    grid-row: 3 / 3;
+    grid-column: 9 / span 3;
+    grid-row: 4 / span 3;
+    align-self: center;
+    justify-self: end;
+
+    button {
+      font-size: 130%;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
   }
 }

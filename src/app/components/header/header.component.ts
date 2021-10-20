@@ -8,9 +8,8 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 })
 export class HeaderComponent implements OnInit {
   sideNavOpen = false;
-  itemsInCart = 0;
 
-  constructor(private cartService: ShoppingCartService) { }
+  constructor(public cartService: ShoppingCartService) { }
 
   ngOnInit(): void {
   }

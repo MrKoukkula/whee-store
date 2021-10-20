@@ -8,8 +8,10 @@ import { Product } from '../models/product';
 })
 export class ShoppingCartService {
   public cartOpen: boolean;
+  itemsInCart = 0;
+  totalSum = 0;
 
-  private productsInCart$: CartItem[];
+  private productsInCart$: CartItem[] = [];
 
   constructor() { }
 
@@ -22,19 +24,43 @@ export class ShoppingCartService {
       return;
     }
 
-    this.productsInCart$ = this.productsInCart$.map(item => {
-      if (item.product.id === product.id) {
-        item.amount++;
-      } else {
-        return {
-          amount: 1,
-          product,
-        } as CartItem;
-      }
-      return item;
-    });
-
+    if (this.productsInCart$.find(i => i.product.id === product.id)) {
+      this.productsInCart$ = this.productsInCart$.map(item => {
+        if (item.product.id === product.id) {
+          item.amount++;
+        }
+        return item;
+      });
+    } else {
+      const newItem = {
+        amount: 1,
+        product,
+      } as CartItem;
+      this.productsInCart$.push(newItem);
+    }
+    console.log(this.productsInCart$);
+    this.countItems();
+    this.countTotalSum();
     return of(this.productsInCart$);
+  }
 
+  countItems(): void {
+    let allItems = 0;
+    this.productsInCart$.forEach(item => {
+      allItems = allItems + item.amount;
+    });
+    console.log(allItems);
+    this.itemsInCart = allItems;
+  }
+
+  countTotalSum(): void {
+    if (this.productsInCart$ === undefined) { return; }
+
+    let sum = 0;
+    this.productsInCart$.forEach(item => {
+      sum = sum + item.amount * item.product.price;
+    });
+    this.totalSum = sum;
+    console.log(sum);
   }
 }

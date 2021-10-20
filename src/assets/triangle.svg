@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 113" width="131" height="113">
+	<title>Artboard 1</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ef4a8d;stroke-width: 2 } 
+	</style>
+	<g id="Artboard 1">
+		<g id="triangle">
+			<path id="Polygon 1" class="shp0" d="M65.99 0.99L130.99 113L0.99 113L65.99 0.99Z" />
+		</g>
+	</g>
+</svg>

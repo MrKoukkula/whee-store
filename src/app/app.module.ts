@@ -9,6 +9,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [],
